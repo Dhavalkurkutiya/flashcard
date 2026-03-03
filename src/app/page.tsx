@@ -1,12 +1,8 @@
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
+import { FlashcardApp } from "@/features/flashcard/view/flashcard-app";
+import React from "react";
 
-export default function Home() {
-  return (
-    <div className="p-4">
-      <Button>
-        Click me
-      </Button>
-    </div>
-  );
-}
+const Home = () => {
+  return <FlashcardApp />;
+};
+
+export default Home;
