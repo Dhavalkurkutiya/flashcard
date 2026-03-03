@@ -1,6 +1,8 @@
 # Flashcard App
 
 > 🚀 **Live Demo:** [https://flashcard-rho-peach.vercel.app/](https://flashcard-rho-peach.vercel.app/)
+>
+> 📌 **Project Page:** [https://roadmap.sh/projects/flash-cards](https://roadmap.sh/projects/flash-cards)
 
 A flashcard study app built with **Next.js 16**, **React 19**, **TypeScript**, and **Tailwind CSS**. It lets you flip through JavaScript/React Q&A cards with progress tracking.
 
