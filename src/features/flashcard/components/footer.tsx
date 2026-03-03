@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { ChevronLeft, ChevronRight, Eye, EyeOff } from "lucide-react";
 
 type Props = {
   handleNext: () => void;
@@ -18,17 +19,43 @@ export const Footer = ({
   total,
 }: Props) => {
   return (
-    <div className="flex gap-4 mt-4">
-      <Button onClick={handlePrev} disabled={currentIndex === 0}>
-        Previous
+    <div className="flex items-center gap-3 mt-8">
+      <Button
+        variant="outline"
+        size="icon"
+        onClick={handlePrev}
+        disabled={currentIndex === 0}
+        className="rounded-full w-11 h-11"
+      >
+        <ChevronLeft className="w-5 h-5" />
       </Button>
 
-      <Button onClick={toggleAnswer}>
-        {showAnswer ? "Hide Answer" : "Show Answer"}
+      <Button
+        onClick={toggleAnswer}
+        className="min-w-[152px] rounded-full"
+        variant={showAnswer ? "outline" : "default"}
+      >
+        {showAnswer ? (
+          <>
+            <EyeOff className="w-4 h-4 mr-2" />
+            Hide Answer
+          </>
+        ) : (
+          <>
+            <Eye className="w-4 h-4 mr-2" />
+            Show Answer
+          </>
+        )}
       </Button>
 
-      <Button onClick={handleNext} disabled={currentIndex === total - 1}>
-        Next
+      <Button
+        variant="outline"
+        size="icon"
+        onClick={handleNext}
+        disabled={currentIndex === total - 1}
+        className="rounded-full w-11 h-11"
+      >
+        <ChevronRight className="w-5 h-5" />
       </Button>
     </div>
   );
